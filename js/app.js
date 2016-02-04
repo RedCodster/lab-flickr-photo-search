@@ -7,7 +7,6 @@ $(document).ready(function () {
   var bindSearchButton = function () {
     $('#search').on('click', function (e) {
       e.preventDefault();
-      console.log('Buttons are bound!');
       srchQuery = $('input.form-control').val();
       srchMode = $('selectpicker.form-control').val();
       getPhotos(srchQuery, srchMode);
@@ -42,7 +41,7 @@ $(document).ready(function () {
   };
 
   var showNewPic = function (elem, index) {
-    var newPic = ('<div><img src="'+elem.media.m+'"></li>');
+    var newPic = ('<div class="row col-xs-3"><img class="thumbnail" src="'+elem.media.m+'"></div>');
     $('#images').prepend(newPic);
   };
 
